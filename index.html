@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <script src="https://kit.fontawesome.com/3259a9335c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    
+    <header class="container mx-auto bg-background">
+      <section class="w-11/12 mx-auto py-6">
+        <div class="flex justify-between items-center">
+            <div class="">
+              <img src="images/Logo.png" alt="">
+            </div>
+            <div class="hidden lg:flex">
+              <input id="searchBox" type="text" class="input input-bordered" placeholder="Search video, Authors">
+              <button class="btn bg-red-500 text-white">Search</button>
+            </div>
+            <div class="">
+              <button class="btn bg-red-500 text-white">Blog</button>
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="lg:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content right-0 bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <input type="text" class="input input-bordered" placeholder="Search video, Authors">
+                    <button class="btn bg-red-500 text-white">Search</button>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="container mx-auto">
+
+      <section class="flex justify-center items-center py-5">
+        <div id="category" class="flex gap-5">
+          <button onclick="allVideos()" class="btn text-xl font-bold bg-red-500 text-white">All</button>
+        </div>
+      </section>
+
+      <section id="video" class="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5">
+        
+      </section>
+
+    </main>
+
+    <button id="showModalData" class="btn hidden" onclick="modal.showModal()">open modal</button>
+    <dialog id="modal" class="modal modal-bottom sm:modal-middle">
+      
+      <div class="modal-box">
+        <div id="modalContent" class="space-y-4"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="container mx-auto">
+      
+    </footer>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/video.js"></script>
+</body>
+</html>
